@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { SyntheticEvent } from 'react'
 import "./Card.css";
@@ -18,7 +19,7 @@ const Card: React.FC<Props> = ({ id, searchResult, onPortfolioCreate }: Props) :
       key={id}
       id={id}
     >
-      <Link to={'/company/${searchResult/symbol}'}
+      <Link to={'/company/${searchResult.symbol}'}
       className="font-bold text-center text-black md:text-left" 
       >
         {searchResult.name} ({searchResult.symbol})

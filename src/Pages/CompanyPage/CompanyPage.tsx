@@ -10,12 +10,12 @@ interface Props {}
 
 const CompanyPage = (props: Props) => {
   let { ticker } = useParams();
-  const [company, setCompnay] = useState<CompanyProfile>();
+  const [company, setCompany] = useState<CompanyProfile>();
 
   useEffect(() => {
     const getProfileInit = async () => {
       const result = await getCompanyProfile(ticker!);
-      setCompnay(result?.data[0]);
+      setCompany(result?.data[0]);
     }
     getProfileInit();
   }, []);
@@ -34,6 +34,5 @@ const CompanyPage = (props: Props) => {
       )}
     </div>
   )
-}
-
+};
 export default CompanyPage
